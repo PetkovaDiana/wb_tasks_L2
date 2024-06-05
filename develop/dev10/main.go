@@ -14,7 +14,7 @@ import (
 )
 
 /*
-=== Утилита telnet ===
+Утилита telnet
 
 Реализовать примитивный telnet клиент:
 Примеры вызовов:
@@ -124,7 +124,7 @@ func writeSocket(conn net.Conn, errChan chan<- error) {
 func telnet(args *args) error {
 	address := fmt.Sprintf("%s:%s", args.host, args.port)
 
-	fmt.Println("Connecting to", address, "...")
+	//fmt.Println("Connecting to", address, "...")
 
 	conn, err := net.DialTimeout("tcp", address, args.timeout)
 	if err != nil {

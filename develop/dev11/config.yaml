@@ -1,0 +1,4 @@
+server:
+  port: "8080"
+  read_timeout: 2000 # millisecond
+  write_timeout: 2000 # millisecond
