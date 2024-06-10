@@ -1,4 +1,4 @@
-package dto
+package model
 
 import (
 	"fmt"
@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+// Event - store all information about event
 type Event struct {
 	EventID int    `json:"event_id"`
 	UserID  int    `json:"user_id"`

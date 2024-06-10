@@ -1,0 +1,9 @@
+drwxrwxrwx 1 swagstaf swagstaf 4096 Jan 26 15:54 .
+drwxrwxrwx 1 swagstaf swagstaf 4096 Dec 17 19:46 ..
+drwxrwxrwx 1 swagstaf swagstaf 4096 Jun 25 20:40 .idea
+-rwxrwxrwx 1 swagstaf swagstaf   22 Jan 24 18:41 go.mod
+-rwxrwxrwx 1 swagstaf swagstaf 8636 Jan 25 20:41 task.go
+-rwxrwxrwx 1 swagstaf swagstaf   13 Jan 17 19:46 task_test.go
+-rwxrwxrwx 1 swagstaf swagstaf  321 Jan 26 15:54 test1
+-rwxrwxrwx 1 swagstaf swagstaf   75 Jan 26 15:54 test2
+-rwxrwxrwx 1 swagstaf swagstaf   12 Jan 26 15:55 test3

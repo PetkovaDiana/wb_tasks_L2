@@ -7,7 +7,7 @@ import (
 )
 
 /*
-Задача на распаковку
+ Задача на распаковку
 
 Создать Go функцию, осуществляющую примитивную распаковку строки, содержащую повторяющиеся символы / руны, например:
 	- "a4bc2d5e" => "aaaabccddddde"
@@ -26,6 +26,7 @@ import (
 
 var errCorrectness = errors.New("the string must not start with a digit and contain two digits in a row")
 
+// isNumber - returns true if rune is between '1' - '9'
 func isNumber(c rune) bool {
 	if c >= '1' && c <= '9' {
 		return true
@@ -33,10 +34,12 @@ func isNumber(c rune) bool {
 	return false
 }
 
+// isSlash - returns true if c is slash
 func isSlash(c rune) bool {
 	return c == '\\'
 }
 
+// isCorrect - checking for string correctness
 func isCorrect(r []rune) bool {
 	if isNumber(r[0]) {
 		return false
@@ -47,6 +50,7 @@ func isCorrect(r []rune) bool {
 		slash    bool
 	)
 
+	// checking for two numbers in a row
 	for i := range r {
 		if isSlash(r[i]) {
 			slash = true
@@ -64,6 +68,7 @@ func isCorrect(r []rune) bool {
 	return true
 }
 
+// repeatRune - repeats rune c count times
 func repeatRune(c rune, count int) []rune {
 	res := make([]rune, 0, count)
 	for i := 0; i < count; i++ {
@@ -72,6 +77,18 @@ func repeatRune(c rune, count int) []rune {
 	return res
 }
 
+/*
+unpackString - unpacking string like:
+
+	"a4bc2d5e" => "aaaabccddddde"
+	"abcd" => "abcd"
+	"45" => "" (incorrect string)
+	"" => ""
+
+	qwe\4\5 => qwe45
+	qwe\45 => qwe44444
+	qwe\\5 => qwe\\\\\
+*/
 func unpackString(str string) (string, error) {
 	if len(str) < 1 {
 		return str, nil

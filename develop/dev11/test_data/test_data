@@ -1,0 +1,86 @@
+[
+    {
+        "event_id": 1,
+        "user_id": 1,
+        "title": "First event for first user",
+        "descr": "first testing event",
+        "date": "2022-02-01T17:10"
+    },
+    {
+        "event_id": 2,
+        "user_id": 1,
+        "title": "Second event for first user",
+        "descr": "second event",
+        "date": "2022-02-01T15:10"
+    },
+    {
+        "event_id": 3,
+        "user_id": 1,
+        "title": "Third event for first user",
+        "descr": "Some event",
+        "date": "2022-02-01T12:00"
+    },
+    {
+        "event_id": 1,
+        "user_id": 2,
+        "title": "First event or second user",
+        "descr": "first testing event",
+        "date": "2022-02-01T17:10"
+    },
+    {
+        "event_id": 2,
+        "user_id": 2,
+        "title": "Second event for second user",
+        "descr": "second event",
+        "date": "2022-02-01T15:10"
+    },
+    {
+        "event_id": 3,
+        "user_id": 2,
+        "title": "Third event or second user",
+        "descr": "Some event",
+        "date": "2022-02-01T12:00"
+    },
+    {
+        "event_id": 4,
+        "user_id": 1,
+        "title": "First event on Week",
+        "descr": "first testing event",
+        "date": "2022-02-07T17:10"
+    },
+    {
+        "event_id": 5,
+        "user_id": 1,
+        "title": "Second event on Week",
+        "descr": "second event",
+        "date": "2022-02-10T15:10"
+    },
+    {
+        "event_id": 6,
+        "user_id": 1,
+        "title": "Third event on Week",
+        "descr": "Some event",
+        "date": "2022-02-13T12:00"
+    },
+    {
+        "event_id": 4,
+        "user_id": 2,
+        "title": "First event on Month",
+        "descr": "first testing event",
+        "date": "2022-03-07T17:10"
+    },
+    {
+        "event_id": 5,
+        "user_id": 2,
+        "title": "Second event on Month",
+        "descr": "second event",
+        "date": "2022-03-10T15:10"
+    },
+    {
+        "event_id": 6,
+        "user_id": 2,
+        "title": "Third event on Month",
+        "descr": "Some event",
+        "date": "2022-03-13T12:00"
+    }
+]

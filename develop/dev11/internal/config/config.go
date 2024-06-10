@@ -1,30 +1,34 @@
 package config
 
 import (
-	"github.com/ilyakaznacheev/cleanenv"
-	"github.com/joho/godotenv"
-	"main.go/server"
+	"main.go/internal/config/helper"
 	"os"
+	"path/filepath"
+
+	"gopkg.in/yaml.v3"
 )
 
-const (
-	envPath = ".env"
-)
-
-type App struct {
-	ServerConfig *server.Config `yaml:"server"`
+// HttpServer - contains ip and port for http server
+type HttpServer struct {
+	IP   string `yaml:"ip"`
+	Port string `yaml:"port"`
 }
 
-func NewAppConfig() (*App, error) {
-	if err := godotenv.Load(envPath); err != nil {
-		return nil, err
+type Config struct {
+	HttpServer HttpServer `yaml:"http_server"`
+}
+
+func ReadConfigYaml(filePath string) (cfg Config, err error) {
+	file, err := os.Open(filepath.Clean(filePath))
+	if err != nil {
+		return cfg, err
 	}
+	defer helper.Closer(file)
 
-	cfgApp := new(App)
-
-	if err := cleanenv.ReadConfig(os.Getenv("CONFIG_PATH"), cfgApp); err != nil {
-		return nil, err
+	decoder := yaml.NewDecoder(file)
+	err = decoder.Decode(&cfg)
+	if err != nil {
+		return cfg, err
 	}
-
-	return cfgApp, nil
+	return cfg, nil
 }
